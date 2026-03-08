@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: rgb(252, 239, 239);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+
+.heading h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.heading span {
+    color: orangered;
+}
+
+.heading h1:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Links */
+.links {
+    display: flex;
+    gap: 30px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: orangered;
+}
+
+/* Title */
+.cont {
+    text-align: center;
+    margin: 30px 0 10px;
+    text-decoration: underline red 4px;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    padding: 40px 10%;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+    border: 2px solid black;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item:hover {
+    box-shadow: 0 0 20px rgb(252, 0, 0);
+}
+
+/* Form */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    color: rgb(13, 7, 71);
+    margin-top: 10px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-top: 5px;
+}
+
+#buttona {
+    margin: 20px auto 0;
+    padding: 10px 30px;
+    background-color: orangered;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+#buttona:hover {
+    transform: scale(1.1);
+    background: black;
+    border: 2px solid red;
+}
+
+/* Map */
+.map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border: 0;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+#I {
+    display: flex;
+    gap: 20px;
+}
+
+.icon img {
+    width: 25px;
+    height: 25px;
+    transition: 0.3s;
+}
+
+.icon img:hover {
+    transform: scale(1.3);
+}
+
+#h {
+    margin-top: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+#h:hover {
+    color: orangered;
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup.active {
+    display: flex;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 25px;
+    max-width: 90%;
+    width: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Mobile Navbar Hamburger */
+@media (max-width: 600px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: black;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .links.active {
+        display: flex;
+    }
+
+    .links a {
+        font-size: 16px;
+    }
+
+    .Header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px) {
+    .Header {
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }

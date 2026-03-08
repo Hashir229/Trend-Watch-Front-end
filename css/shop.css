@@ -1,0 +1,246 @@
+/* ===== General ===== */
+body {
+    margin: 0;
+    background-color: rgb(252, 239, 239);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== Navigation ===== */
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+
+.heading h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.heading span {
+    color: orangered;
+}
+
+.heading h1:hover {
+    transition: transform 0.4s ease;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Links */
+.links {
+    display: flex;
+    gap: 30px;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    transform: scale(1.1);
+    color: orangered;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background: white;
+}
+
+/* ===== Cards ===== */
+.pics {
+    text-align: center;
+    margin: 20px 0;
+    text-decoration: underline rgb(251, 0, 0) 5px;
+    cursor: pointer;
+}
+
+.containerr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px 20px 20px;
+}
+
+.item {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: 300px;
+    background: rgb(254, 251, 251);
+    border-radius: 20px;
+    border: 5px solid rgb(200, 200, 200);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 15px rgb(252, 0, 0);
+    cursor: pointer;
+}
+
+.item img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 10px;
+}
+
+.hhh {
+    margin: 10px 0 0 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ppp {
+    margin: 5px 0 10px 0;
+    font-weight: 700;
+    text-align: center;
+}
+
+.bbb {
+    padding: 8px 20px;
+    background-color: orangered;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bbb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(241, 8, 8, 0.6);
+    background-color: black;
+    border: 2px solid rgb(230, 47, 47);
+}
+
+/* ===== Footer ===== */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-top: 0px;
+}
+
+#I {
+    display: flex;
+    gap: 20px;
+}
+
+.icon img {
+    width: 25px;
+    height: 25px;
+    transition: 0.3s;
+}
+
+.icon img:hover {
+    transform: scale(1.3);
+}
+
+#h {
+    margin-top: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+#h:hover {
+    color: orangered;
+}
+
+/* ===== Responsive ===== */
+
+/* Mobile Navbar Hamburger */
+@media (max-width: 600px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: black;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .links.active {
+        display: flex;
+    }
+
+    .links a {
+        font-size: 16px;
+    }
+
+    .Header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+
+/* Mobile Cards 2 per row */
+@media (max-width: 300px) {
+    .item {
+        flex: 1 1 calc(50% - 20px);
+        max-width: 140px;
+    }
+
+    .item img {
+        max-width: 120px;
+    }
+
+    .bbb {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .hhh {
+        font-size: 14px;
+    }
+
+    .ppp {
+        font-size: 12px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 300px) and (max-width: 1024px) {
+    .item {
+        flex: 1 1 calc(33.33% - 20px);
+        max-width: 200px;
+    }
+
+    .item img {
+        max-width: 180px;
+    }
+}

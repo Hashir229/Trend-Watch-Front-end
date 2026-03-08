@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="Header">
+        <div class="heading">
+            <h1>Trend <span>Watch</span></h1>
+        </div>
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
+
+        <div class="links" id="navLinks">
+            <a href="html/index.html">Home</a>
+            <a href="html/about.html">About Us</a>
+            <a href="html/shop.html">Shop</a>
+            <a href="">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Page Title -->
+    <h1 class="cont">Contact Us</h1>
+
+    <div class="container">
+        <div class="item">
+            <form id="contactForm">
+                <h3>Contact Us</h3>
+
+                <label>Name</label>
+                <input type="text" name="name" id="name" placeholder="Your Name" required>
+
+                <label>Email</label>
+                <input type="email" name="email" id="email" placeholder="Your Email" required>
+
+                <label>Phone</label>
+                <input type="number" name="phone" id="phone" placeholder="Phone" required>
+
+                <button type="submit" id="buttona">Submit</button>
+            </form>
+        </div>
+
+        <div class="item map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d115791.45601215804!2d66.96677209777276!3d24.91561071274841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srolex%20watch!5e0!3m2!1sen!2s!4v1765839286412!5m2!1sen!2s"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <nav class="footer">
+        <div id="I">
+            <a href="#" class="icon"><img src="imges/apple.png" alt=""></a>
+            <a href="#" class="icon"><img src="imges/facebook.png" alt=""></a>
+            <a href="#" class="icon"><img src="imges/instagram.png" alt=""></a>
+            <a href="#" class="icon"><img src="imges/twitter.png" alt=""></a>
+            <a href="#" class="icon"><img src="imges/youtube.png" alt=""></a>
+        </div>
+        <a href="#" id="h">© 2025 Trend Watch — Crafted with Passion. All Rights Reserved.</a>
+    </nav>
+
+    <!-- Popup -->
+    <div id="thankYouPopup" class="popup">
+        <div class="popup-content">
+            <h2>Thank You!</h2>
+            <p>Your message has been successfully submitted.</p>
+            <button id="okBtn">OK</button>
+        </div>
+    </div>
+
+    <script>
+        // Contact form popup
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contactForm");
+            const popup = document.getElementById("thankYouPopup");
+            const okBtn = document.getElementById("okBtn");
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                popup.classList.add("active");
+            });
+
+            okBtn.addEventListener("click", function () {
+                popup.classList.remove("active");
+                form.reset();
+            });
+
+            // Hamburger toggle
+            const hamburger = document.getElementById("hamburger");
+            const navLinks = document.getElementById("navLinks");
+
+            hamburger.addEventListener("click", function () {
+                navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>
